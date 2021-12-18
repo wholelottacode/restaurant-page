@@ -1,5 +1,5 @@
 export function loadHomePage(parentContainer) {
-  const container = document.createElement('div')
+  const container = document.createElement('section')
   const h1 = document.createElement('h1')
   h1.textContent = 'Glizzy Gang'
 
