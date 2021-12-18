@@ -46,6 +46,8 @@ const displayController = (function() {
 
   function setup() {
     createNavbar()
+    clearContent()
+    loadHomePage(content)
   }
 
   return {
@@ -54,4 +56,3 @@ const displayController = (function() {
 })()
 
 displayController.setup()
-// loadHomePage()

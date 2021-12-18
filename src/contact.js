@@ -9,6 +9,6 @@ export function loadContactPage(parentContainer) {
   const p = document.createElement('p')
   p.textContent = 'Reach out to us at 213-647-9855'
 
-  container.append(img, h3, p)
+  container.append(h3, img, p)
   parentContainer.appendChild(container)
 }
