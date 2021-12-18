@@ -1,13 +1,29 @@
-import {loadHomePage} from './home'
+import { loadContactPage } from './contact'
+import { loadHomePage } from './home'
+import { loadMenuPage } from './menu'
 
 const displayController = (function() {
+  const body = document.querySelector('body')
   const content = document.querySelector('#content')
+
+  function clearContent() {
+    if(content.firstChild) {
+      content.removeChild(content.firstChild)
+    }
+  }
 
   function onTabClick(e) {
     const tab = e.target.textContent
+    clearContent()
     switch(tab) {
       case 'Home':
-        loadHomePage()
+        loadHomePage(content)
+        return
+      case 'Menu':
+        loadMenuPage(content)
+        return
+      case 'Contact':
+        loadContactPage(content)
         return
     }
   }
@@ -25,7 +41,7 @@ const displayController = (function() {
     })
 
     // set first tab (Home) as default selected
-    content.appendChild(ul)
+    body.insertBefore(ul, content)
   }
 
   function setup() {

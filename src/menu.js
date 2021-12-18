@@ -1,3 +1,3 @@
-export function loadMenuPage() {
-  console.log('menu')
+export function loadMenuPage(parentContainer) {
+  console.log(parentContainer)
 }

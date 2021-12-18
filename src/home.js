@@ -1,6 +1,4 @@
-export function loadHomePage() {
-  const content = document.querySelector('#content')
-
+export function loadHomePage(parentContainer) {
   const container = document.createElement('div')
   const h1 = document.createElement('h1')
   h1.textContent = 'Glizzy Gang'
@@ -13,5 +11,5 @@ export function loadHomePage() {
   p.textContent = 'The best glizzys you will ever taste'
 
   container.append(h1, img, p)
-  content.appendChild(container)
+  parentContainer.appendChild(container)
 }
