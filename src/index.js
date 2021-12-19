@@ -7,6 +7,7 @@ import './style.css'
 const displayController = (function() {
   const body = document.querySelector('body')
   const content = document.querySelector('#content')
+  let currentTab
 
   function clearContent() {
     if(content.firstChild) {
@@ -15,7 +16,11 @@ const displayController = (function() {
   }
 
   function onTabClick(e) {
-    const tab = e.target.textContent
+    const target = e.target
+    const tab = target.textContent
+    currentTab.classList.toggle('active')
+    target.classList.add('active')
+    currentTab = target
     clearContent()
     switch(tab) {
       case 'Home':
@@ -35,14 +40,12 @@ const displayController = (function() {
     const tabs = ['Home', 'Menu', 'Contact']
     tabs.forEach(tab => {
       const li = document.createElement('li')
-      // write base styles for li and append the class
-      li.style.cursor = 'pointer'
       li.addEventListener('click', onTabClick)
       li.textContent = tab
       ul.appendChild(li)      
     })
-
-    // set first tab (Home) as default selected
+    currentTab = ul.firstChild
+    currentTab.classList.add('active')
     body.insertBefore(ul, content)
   }
 
