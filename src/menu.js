@@ -1,17 +1,21 @@
+import ChicagoDog from './images/chicago-dog.jpg'
+import ChilliDog from './images/chilli-dog.jpg'
+import Kielbasa from './images/kielbasa.jpg'
+
 const menuItems = [
   {
     name: 'Chicago Dog',
-    img: 'https://www.mypricechopper.com/Frontend/Media/Recipes/ChicagoHotDog_Web_1110x625.jpg',
+    img: ChicagoDog,
     description: 'An all-beef frankfurter on a poppy seed bun topped with yellow mustard, chopped white onions, bright green sweet pickle relish, a dill pickle spear, tomato slices or wedges, pickled sport peppers and a dash of celery salt.'
   },
   {
     name: 'Chilli Dog',
-    img: 'https://media.istockphoto.com/photos/chili-dog-with-a-basket-of-fries-picture-id155352096?b=1&k=20&m=155352096&s=170667a&w=0&h=AvG2etecQ7WzL8oSFAG0hKHEiJDQH5YRzymw06CbzQM=',
+    img: ChilliDog,
     description: 'A hot dog served in a bun and topped with a meat sauce, such as chili con carne. Additional toppings may include cheese, onions, and mustard.'
   },
   {
     name: 'Sweet & Spicy Kielbasa',
-    img: 'https://i.pinimg.com/736x/b1/5f/d8/b15fd89a697c8eef6a7f444eedc33cc0--hollywood-kielbasa.jpg',
+    img: Kielbasa,
     description: 'A polish kielbasa sausage on a poppy seed bun topped with chopped peppers, onions, ketchup and mustard.'
   }
 ]
