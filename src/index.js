@@ -2,6 +2,8 @@ import { loadContactPage } from './contact'
 import { loadHomePage } from './home'
 import { loadMenuPage } from './menu'
 
+import './style.css'
+
 const displayController = (function() {
   const body = document.querySelector('body')
   const content = document.querySelector('#content')
