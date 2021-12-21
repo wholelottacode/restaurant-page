@@ -2,6 +2,7 @@ import Obama from './images/obama-hot-dog.png'
 
 export function loadHomePage(parentContainer) {
   const container = document.createElement('section')
+  container.classList.add('home')
   const h1 = document.createElement('h1')
   h1.textContent = 'Glizzy Gang'
 

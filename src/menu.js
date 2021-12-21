@@ -23,6 +23,7 @@ const menuItems = [
 function createMenuItemElement(menuItem) {
   const {name, img, description} = menuItem
   const container = document.createElement('article')
+  container.classList.add('menu-item')
   const div = document.createElement('div')
 
   const h3 = document.createElement('h3')
@@ -33,7 +34,6 @@ function createMenuItemElement(menuItem) {
 
   const image = document.createElement('img')
   image.setAttribute('src', img)
-  image.setAttribute('width', '500')
 
   container.append(image, div)
   return container
